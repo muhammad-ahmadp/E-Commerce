@@ -1,0 +1,229 @@
+* {
+      padding: 0;
+      margin: 0;
+}
+
+*,
+:after,
+:before {
+      border: 0 solid #e5e7eb;
+      box-sizing: border-box;
+}
+body::-webkit-scrollbar
+{
+        width: 8px;
+}
+body::-webkit-scrollbar-thumb
+{
+       background-color: #00BFA6;
+       outline: 1px solid #00BFA6;
+}
+
+.first {
+      background-color: #F5F5F4;
+      --section-background: #F5F5F4;
+      color: #000000;
+      border-color: #E9E7DC;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      border-top-width: 0px;
+      border-bottom-width: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+
+.first h6 {
+      font-size: 14px;
+}
+
+.nav {
+      display: flex;
+      justify-content: space-between;
+      height: 50px;
+      align-items: flex-end;
+}
+
+.logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+}
+
+.logo img {
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+}
+
+.navbar {
+      /* background: #fff; */
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+      background-color: #FFFFFF;
+      color: #000000;
+      border-color: #E9E7DC;
+      padding-top: 0px;
+      padding-bottom: 26px;
+      border-top-width: 1px;
+      border-bottom-width: 1px;
+}
+
+.nav ul {
+      display: flex;
+      gap: 25px;
+      list-style: none;
+}
+
+.nav ul li {
+      position: relative;
+}
+
+.nav ul li a {
+      text-decoration: none;
+      color: #000000;
+      font-size: 16px;
+      text-transform: uppercase;
+}
+
+.nav ul li::after {
+      content: "";
+      width: 0%;
+      height: 1px;
+      background-color: #E9E7DC;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      transition: width 0.3s;
+}
+
+.nav ul li:hover::after {
+      width: 100%;
+}
+
+.serach {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 5px;
+}
+
+.serach a {
+      color: #000000;
+      font-size: 16px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+}
+
+.serach a i {
+      font-size: 18px;
+      margin: 0 10px;
+}
+
+.shop-cart img {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+}
+
+.menu {
+      display: none;
+      font-size: 18px;
+      color: #000000;
+}
+#close
+{
+       font-size: 18px;
+       color: #000000;
+}
+.hero2 {
+      position: relative;
+      display: inline-block;
+      /* Only as big as the image */
+      width: 100%;
+      height: 100vh;
+}
+
+.hero2 img {
+      width: 100%;
+      /* or use a fixed width like 1200px if you want */
+      height: 100%;
+      /* Keeps original aspect ratio */
+
+}
+
+.content2 {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+}
+
+.content2 h1 {
+      font-size: 24px;
+      margin-bottom: 15px;
+      font-weight: 600;
+}
+
+.content2 p {
+      font-size: 15px;
+      margin-bottom: 15px;
+}
+
+.content2 button {
+      padding: 10px 30px;
+      font-size: 1rem;
+      background: white;
+      color: black;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 15px;
+      font-weight: 600;
+      border: 1px solid #fff;
+      transition: all 0.3s ease;
+}
+
+.content2 button:hover {
+      background: #000000;
+      color: white;
+}
+
+@media(max-width:768px) {
+      .nav ul {
+            display: none;
+      }
+
+      .menu {
+            display: block;
+            align-items: flex-end;
+      }
+
+      .header__menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            list-style: none;
+            padding: 2em 1em;
+            flex-direction: column;
+            gap: 2em;
+            align-items: flex-start;
+            transition: right 0.3s ease;
+      }
+
+      .header__menu.active {
+            left: 0;
+            display: flex;
+      }
+}
